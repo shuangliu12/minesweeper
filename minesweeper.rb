@@ -10,7 +10,7 @@ class Minesweeper < Gosu::Window
   def initialize
     super(SCREEN_WIDTH, SCREEN_HEIGHT, false)
 
-    @field = Minefield.new(50, 50, 10)
+    @field = Minefield.new(10, 10, 10)
     @mine_font = Gosu::Font.new(self, "Arial", (cell_size / 1.2).to_i)
     @large_font = Gosu::Font.new(self, "Arial", screen_height / 6)
     @state = :running
@@ -41,7 +41,7 @@ class Minesweeper < Gosu::Window
   end
 
   def reset
-    @field = Minefield.new(20, 20, 50)
+    @field = Minefield.new(10, 10, 10)
     @state = :running
   end
 
